@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spaindb W2 | NULL-HUNTERS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <header>
+            <h1>spaindb <span class="version">W2</span></h1>
+            <p class="creator">Created by <span>NULL-HUNTERS</span></p>
+        </header>
+ 
+        <main>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search name or surname (e.g. ALVAREZ)...">
+                <button onclick="searchDB()"><i class="fas fa-search"></i> Search</button>
+            </div>
+ 
+            <div id="resultArea" class="hidden">
+                <div id="resultsContainer"></div>
+            </div>
+ 
+            <!-- NUEVA SECCIÓN: Google Dork Area -->
+            <div class="dork-section">
+                <h3><i class="fas fa-globe"></i> Google Dorking</h3>
+                <p>If you didn't find them in the DB, search the global web:</p>
+                <div class="dork-box">
+                    <input type="text" id="dorkInput" placeholder="Enter name or website...">
+                    <div class="dork-buttons">
+                        <button class="dork-btn pdf" onclick="doDork('pdf')">Find PDFs</button>
+                        <button class="dork-btn docx" onclick="doDork('docx')">Find DOCX</button>
+                        <button class="dork-btn site" onclick="doDork('site')">Site Search</button>
+                    </div>
+                </div>
+            </div>
+ 
+            <div class="footer-actions">
+                <a href="https://discord.gg/Rfs9N3fya4" target="_blank" class="discord-btn">
+                    <i class="fab fa-discord"></i> Join Discord
+                </a>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
